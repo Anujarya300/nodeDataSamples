@@ -6,7 +6,7 @@ import {DynamicRepository} from 'nodedata/core/dynamic/dynamic-repository';
 @decorator.repository({ path: 'studentEntityRepository', model: StudentEntity })
 export class studentEntityRepository extends DynamicRepository {
 
-    @preauthorize({ serviceName: "PreAuthService", methodName: "createdBy", params: { id: "#id", entity: "#entity" } })
+    @preauthorize({ serviceName: "PreAuthService", methodName: "checkRole", params: { id: "#id", entity: "#entity" } })
     doAction() {
 
         
