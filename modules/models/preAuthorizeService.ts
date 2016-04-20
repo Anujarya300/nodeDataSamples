@@ -22,7 +22,6 @@ export class PreAuthService {
         var rolesArray: Array<Roles1>;
         var role: Roles1;
         var isAdmin: boolean;
-        debugger
         return this.userRepo.findOne(_id).then((user) => {
             usr = user;
             if (user == null || user == undefined) {
@@ -31,7 +30,7 @@ export class PreAuthService {
             var rsuser = new RSUserModel(usr.name, usr.password, usr.email, usr.roles);
             rolesArray = user.roles;
             for (role of rolesArray) {
-                if (role.name === "ROLE_ADMIN") {
+                if (role.name === "ROLE_ADIN") {
                     isAdmin = true;
                     break;
                 }

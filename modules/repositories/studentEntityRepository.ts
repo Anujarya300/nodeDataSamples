@@ -9,7 +9,7 @@ export class studentEntityRepository extends DynamicRepository {
     @preauthorize({ serviceName: "PreAuthService", methodName: "checkRole", params: { id: "#id", entity: "#entity" } })
     doAction() {
 
-        
+        return true;
         // Custom code to do operations on an entity
        
 
