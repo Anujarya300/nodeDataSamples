@@ -30,7 +30,7 @@ export class PreAuthService {
             var rsuser = new RSUserModel(usr.name, usr.password, usr.email, usr.roles);
             rolesArray = user.roles;
             for (role of rolesArray) {
-                if (role.name === "ROLE_ADIN") {
+                if (role.name === "ROLE_ADMIN") {
                     isAdmin = true;
                     break;
                 }
